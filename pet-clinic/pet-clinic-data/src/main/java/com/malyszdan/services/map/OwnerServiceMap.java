@@ -1,11 +1,11 @@
 package com.malyszdan.services.map;
 
 import com.malyszdan.model.Owner;
-import com.malyszdan.services.CrudService;
+import com.malyszdan.services.OwnerService;
 import java.util.Set;
 
 public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements
-    CrudService<Owner, Long> {
+    OwnerService {
 
   @Override
   public Set<Owner> findAll() {
@@ -30,5 +30,10 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements
   @Override
   public void deleteById(Long id) {
     super.deleteById(id);
+  }
+
+  @Override
+  public Owner findByLastName(Long id) {
+    throw new UnsupportedOperationException();
   }
 }

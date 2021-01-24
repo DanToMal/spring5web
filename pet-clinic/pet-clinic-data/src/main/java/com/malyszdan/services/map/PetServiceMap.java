@@ -1,11 +1,11 @@
 package com.malyszdan.services.map;
 
 import com.malyszdan.model.Pet;
-import com.malyszdan.services.CrudService;
+import com.malyszdan.services.PetService;
 import java.util.Set;
 
 public class PetServiceMap extends AbstractMapService<Pet, Long> implements
-    CrudService<Pet, Long> {
+    PetService {
 
   @Override
   public Set<Pet> findAll() {
