@@ -3,7 +3,9 @@ package com.malyszdan.services.map;
 import com.malyszdan.model.Vet;
 import com.malyszdan.services.VetService;
 import java.util.Set;
+import org.springframework.stereotype.Service;
 
+@Service
 public class VetServiceMap extends AbstractMapService<Vet, Long> implements
     VetService {
 

@@ -4,8 +4,6 @@ import com.malyszdan.model.Owner;
 import com.malyszdan.model.Vet;
 import com.malyszdan.services.OwnerService;
 import com.malyszdan.services.VetService;
-import com.malyszdan.services.map.OwnerServiceMap;
-import com.malyszdan.services.map.VetServiceMap;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -15,9 +13,9 @@ public class DataLoader implements CommandLineRunner {
   private final OwnerService ownerService;
   private final VetService vetService;
 
-  public DataLoader() {
-    this.ownerService = new OwnerServiceMap();
-    this.vetService = new VetServiceMap();
+  public DataLoader(OwnerService ownerService, VetService vetService) {
+    this.ownerService = ownerService;
+    this.vetService = vetService;
   }
 
   @Override
