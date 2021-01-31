@@ -5,6 +5,14 @@
   <title>List of Vets</title>
 </head>
 <body>
-  <h1 th:text="'List of Vets'">List of Vets...</h1>
+<!--/*@thymesVar id="vet" type="com.malyszdan.model.Vet"*/-->
+<h1 th:text="'List of Vets'">Vets List</h1>
+<table>
+  <tr th:each="vet : ${vets}">
+    <th th:text="${vet.id}">1</th>
+    <th th:text="${vet.firstName}">Joe</th>
+    <th th:text="${vet.lastName}">Black</th>
+  </tr>
+</table>
 </body>
 </html>
