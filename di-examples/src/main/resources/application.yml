@@ -1,0 +1,5 @@
+guru:
+  jms:
+    username: John
+    password: pass123
+    url: someUrl
